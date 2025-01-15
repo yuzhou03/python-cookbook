@@ -4,10 +4,7 @@
 
 import heapq
 
-
-def delimiter():
-    print("-" * 100)
-
+from common.seperator import delimiter
 
 portfolio = [
     {"name": "IBM", "shares": 100, "price": 91.1},

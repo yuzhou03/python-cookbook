@@ -20,7 +20,7 @@ import sys
 
 for part in sample():
     sys.stdout.write(part + word_sep)
-sys.stdout.write('\n')
+sys.stdout.write("\n")
 
 
 # (c) Combination of parts into buffers and larger I/O operations
@@ -31,7 +31,7 @@ def combine(source, maxsize):
         parts.append(part)
         size += len(part)
         if size > maxsize:
-            yield ''.join(parts)
+            yield "".join(parts)
             parts = []
             size = 0
     yield word_sep.join(parts)
@@ -39,4 +39,4 @@ def combine(source, maxsize):
 
 for part in combine(sample(), 32768):
     sys.stdout.write(part)
-sys.stdout.write('\n')
+sys.stdout.write("\n")

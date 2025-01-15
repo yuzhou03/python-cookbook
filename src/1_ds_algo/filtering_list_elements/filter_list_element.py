@@ -1,3 +1,5 @@
+from common.seperator import delimiter
+
 # Examples of different ways to filter data
 
 mylist = [1, 4, -5, 10, -7, 2, 3, -1]
@@ -18,26 +20,32 @@ print("Negative values clipped to 0", neg_clip)
 pos_clip = [n if n < 0 else 0 for n in mylist]
 print("Positive values clipped to 0:", pos_clip)
 
+delimiter()
+
 # Compressing example
 print("Compressing example")
 addresses = [
-    '5412 N CLARK',
-    '5148 N CLARK',
-    '5800 E 58TH',
-    '2122 N CLARK',
-    '5645 N RAVENSWOOD',
-    '1060 W ADDISON',
-    '4801 N BROADWAY',
-    '1039 W GRANVILLE',
+    "5412 N CLARK",
+    "5148 N CLARK",
+    "5800 E 58TH",
+    "2122 N CLARK",
+    "5645 N RAVENSWOOD",
+    "1060 W ADDISON",
+    "4801 N BROADWAY",
+    "1039 W GRANVILLE",
 ]
 
 counts = [0, 3, 10, 4, 1, 7, 6, 1]
 
+# Return data elements corresponding to true selector elements.
+# Forms a shorter iterator from selected data elements using the selectors to choose the data elements.
 from itertools import compress
 
+# compress() returns an iterator
 more5 = [n > 5 for n in counts]
 compressed = compress(addresses, more5)
 print("compressed:", compressed)
 print("compressed type:", type(compressed))
 a = list(compress(addresses, more5))
 print(a)
+delimiter()
