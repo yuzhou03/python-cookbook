@@ -14,6 +14,7 @@ dict2 = {"b": 3, "c": 4}
 
 cm = ChainMap(dict1, dict2)
 print(cm)  # 输出: ChainMap({'a': 1, 'b': 2}, {'b': 3, 'c': 4})
+print(f"chainmap size: {len(cm)}")  # 输出: 3（包含两个字典的键值对数量）
 
 # 查找按顺序进行
 print("查找按顺序进行", cm["b"])  # 输出: 2（优先使用 dict1 的值）
