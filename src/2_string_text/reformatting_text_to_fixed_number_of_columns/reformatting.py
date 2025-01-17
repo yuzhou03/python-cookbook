@@ -15,9 +15,8 @@ print()
 print(textwrap.fill(s, 40))
 print()
 
-print(textwrap.fill(s, 40, initial_indent='    '))
+print(textwrap.fill(s, 40, initial_indent="    "))
 print()
 
-print(textwrap.fill(s, 40, subsequent_indent='    '))
+print(textwrap.fill(s, 40, subsequent_indent="    "))
 print()
-
