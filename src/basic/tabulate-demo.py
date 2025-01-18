@@ -42,5 +42,10 @@ data = [
         "gender": "male",
     },
 ]
-
+"""
+tabulate(data, headers="keys", tablefmt="grid")：
+data：这是一个包含字典的列表，每个字典代表一行数据。
+headers="keys"：这个参数告诉 tabulate 使用字典的键作为表格的列标题。
+tablefmt="grid"：这个参数指定了表格的格式为网格样式，即表格会有边框和分隔线。
+"""
 print(tabulate(data, headers="keys", tablefmt="grid"))
