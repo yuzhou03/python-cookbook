@@ -1,4 +1,4 @@
-from common.text import pad_text
+from common.text import print_pad
 
 # Some advanced JSON examples involving ordered dicts and classes
 import json
@@ -7,7 +7,7 @@ import json
 s = '{"name": "ACME", "shares": 50, "price": 490.1}'
 
 # (a) Turning JSON into an OrderedDict
-pad_text("(a) Turning JSON into an OrderedDict")
+print_pad("(a) Turning JSON into an OrderedDict")
 from collections import OrderedDict
 
 data = json.loads(s, object_pairs_hook=OrderedDict)
@@ -15,7 +15,7 @@ print(data)  # OrderedDict([('name', 'ACME'), ('shares', 50), ('price', 490.1)])
 print("type(data)", type(data))  # <class 'collections.OrderedDict'>
 
 # (b) Using JSON to populate an instance
-pad_text("(b) Using JSON to populate an instance")
+print_pad("(b) Using JSON to populate an instance")
 
 
 class JSONObject:
@@ -31,7 +31,7 @@ print(data.price)  # 490.1
 
 # (c) Encoding instances
 
-pad_text("(c) Encoding instances")
+print_pad("(c) Encoding instances")
 
 
 class Point:
@@ -57,7 +57,7 @@ s = json.dumps(p, default=serialize_instance)
 print(s)
 
 # (d) Decoding instances
-pad_text("(d) Decoding instances")
+print_pad("(d) Decoding instances")
 
 classes = {"Point": Point}
 
