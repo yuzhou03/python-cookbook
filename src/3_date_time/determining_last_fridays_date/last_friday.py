@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from common.date import format_datetime, format_datestr
+from common.date import format_datetime
 from common.seperator import delimiter
 
 weekdays = [
