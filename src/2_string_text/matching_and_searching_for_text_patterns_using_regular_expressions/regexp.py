@@ -3,22 +3,26 @@
 # Examples of simple regular expression matching
 
 import re
+from common.text import print_pad
 
-sep_line = "*" * 40
 # Some sample text
-text = 'Today is 11/27/2012. PyCon starts 3/13/2013.'
+text = "Today is 11/27/2012. PyCon starts 3/13/2013."
+print_pad("Some sample text")
+print(text)
 
 # (a) Find all matching dates
-datepat = re.compile(r'\d+/\d+/\d+')
+print_pad("Find all matching dates")
+datepat = re.compile(r"\d+/\d+/\d+")
 print(datepat.findall(text))
-print(sep_line)
 
 # (b) Find all matching dates with capture groups
-datepat = re.compile(r'(\d+)/(\d+)/(\d+)')
+print_pad("Find all matching dates with capture groups")
+datepat = re.compile(r"(\d+)/(\d+)/(\d+)")
 for month, day, year in datepat.findall(text):
-    print('{}-{}-{}'.format(year, month, day))
-print(sep_line)
+    print("{}-{}-{}".format(year, month, day))
 
 # (c) Iterative search
-for m in datepat.finditer(text):
-    print(m.groups())
+print_pad("Iterative search")
+for i, m in enumerate(datepat.finditer(text), start=1):
+    month, day, year = m.groups()
+    print(i, m.groups(), "{}-{}-{}".format(year, month, day))
