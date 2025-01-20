@@ -1,0 +1,20 @@
+autopep8==2.3.1
+black==24.10.0
+certifi==2024.12.14
+charset-normalizer==3.4.1
+click==8.1.8
+idna==3.10
+markdown-it-py==3.0.0
+mdurl==0.1.2
+mypy-extensions==1.0.0
+packaging==24.2
+pathspec==0.12.1
+platformdirs==4.3.6
+pycodestyle==2.12.1
+Pygments==2.19.1
+-e git+ssh://git@github.com/yuzhou03/python-cookbook.git@502f40a6e9d7004dd004cb0af9ae69249da528c0#egg=python_cookbook&subdirectory=src
+requests==2.32.3
+rich==13.9.4
+tabulate==0.9.0
+typing_extensions==4.12.2
+urllib3==2.3.0
