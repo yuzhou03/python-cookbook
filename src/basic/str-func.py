@@ -22,6 +22,7 @@ def string_find():
     """
     字符串查找
     str.find(sub, start=None, end=None)：查找子字符串 sub 在字符串中第一次出现的索引，找不到返回 -1。
+    str.index(sub[, start[, end]])：同 find，但找不到会抛出异常。
     str.rfind(sub, start=None, end=None)：查找子字符串 sub 在字符串中最后一次出现的索引，找不到返回 -1。
     """
 
@@ -50,15 +51,29 @@ def string_count():
 
 
 def split_join():
+    """
+    字符串分割与连接
+
+    该函数演示了如何使用 `split` 和 `join` 方法来处理字符串。
+    `split` 方法用于将字符串分割成列表，`join` 方法用于将列表中的元素连接成字符串。
+    """
     s = "apple,banana,orange"
     print_pad("split")
     print(s)
     print(s.split(","))  # ['apple', 'banana', 'orange']
+    """
+    使用 `split` 方法将字符串 `s` 按逗号分割成列表。
+    输出结果为 ['apple', 'banana', 'orange']。
+    """
 
     print_pad("join")
     fruits = ["apple", "banana", "orange"]
     print(fruits)
     print(", ".join(fruits))  # "apple, banana, orange"
+    """
+    使用 `join` 方法将列表 `fruits` 中的元素用逗号和空格连接成字符串。
+    输出结果为 "apple, banana, orange"。
+    """
 
 
 def main():
