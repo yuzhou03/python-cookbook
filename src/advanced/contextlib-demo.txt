@@ -1,0 +1,2 @@
+Hello, World!
+This is a managed file example, implemented by contextlib.
