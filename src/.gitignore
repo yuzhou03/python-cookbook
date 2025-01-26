@@ -1,2 +1,16 @@
 python_cookbook.egg-info/
 **/**.pyc
+
+**/__pycache__/
+**/**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage/
+**/.coverage.*
+**/.venv/
+**/.tox/
+**/.nox/
+**/.eggs/
+**/build/
+**/dist/
