@@ -28,10 +28,11 @@ class Point(StructTuple):
 
 if __name__ == "__main__":
     s = Stock("ACME", 50, 91.1)
-    print(s)
-    print(s[0])
-    print(s.name)
-    print(s.shares * s.price)
+    print("Stock object s:", s)
+    print("The first element of Stock object s (name):", s[0])
+    print("The name of Stock object s:", s.name)
+    print("The total value of Stock object s (shares * price):", s.shares * s.price)
+
     try:
         s.shares = 23
     except AttributeError as e:
